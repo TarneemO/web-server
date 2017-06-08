@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.PORT || 3000; // this is for heroku or use port 3000 as defult
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -62,6 +63,14 @@ app.get('/about', (req, res) =>{
 	//sending dynamic variable to be used in about.hbs file
 res.render('about.hbs', {
 	pageTitle: 'About page',
+	
+});// static page rendering
+});
+
+app.get('/portfolio', (req, res) =>{
+	//sending dynamic variable to be used in about.hbs file
+res.render('portfolio.hbs', {
+	pageTitle: 'portfolio page',
 	
 });// static page rendering
 });
