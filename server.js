@@ -67,6 +67,7 @@ res.render('about.hbs', {
 });// static page rendering
 });
 
+//registering url for portfolio page
 app.get('/portfolio', (req, res) =>{
 	//sending dynamic variable to be used in about.hbs file
 res.render('portfolio.hbs', {
